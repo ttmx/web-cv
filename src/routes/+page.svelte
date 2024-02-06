@@ -103,6 +103,21 @@
         {RESUME_DATA.summary}
       </p>
     </Section>
+    <Section class="print-force-new-page scroll-mb-16">
+      <h2 class="text-xl font-bold">Projects</h2>
+      <div
+        class="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3"
+      >
+        {#each RESUME_DATA.projects as project}
+          <CardProject
+            title={project.title}
+            description={project.description}
+            tags={[...project.techStack]}
+            link={"link" in project ? project.link.href : undefined}
+          />
+        {/each}
+      </div>
+    </Section>
     <Section>
       <h2 class="text-xl font-bold">Work Experience</h2>
       {#each RESUME_DATA.work as work}
@@ -170,21 +185,6 @@
       </div>
     </Section>
 
-    <Section class="print-force-new-page scroll-mb-16">
-      <h2 class="text-xl font-bold">Projects</h2>
-      <div
-        class="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3"
-      >
-        {#each RESUME_DATA.projects as project}
-          <CardProject
-            title={project.title}
-            description={project.description}
-            tags={[...project.techStack]}
-            link={"link" in project ? project.link.href : undefined}
-          />
-        {/each}
-      </div>
-    </Section>
   </section>
 
   <!-- <CommandMenu
