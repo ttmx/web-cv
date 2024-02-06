@@ -7,10 +7,10 @@ export const RESUME_DATA = {
     location: "Lisbon, Portugal, Earth (sometimes)",
     locationLink: "https://www.google.com/maps/place/Lisbon",
     about:
-        "Full Stack Engineer focused on building products with extra attention to detail",
+        "Full Stack Developer with a passion for fast, beautiful applications, and an interest in urban mobility.",
     summary:
-        "As a Full Stack Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience in working remotely with companies all around the world.",
-    avatarUrl: "https://avatars.githubusercontent.com/u/12669467?v=4",
+        "I'm a computer lover who enjoys making tools that help people. My journey has led me into the world of web development, security, distributed systems, algorithmics and urban mobility.",
+    avatarUrl: "/pfp.png",
     personalWebsiteUrl: "https://tteles.dev",
     contact: {
         email: "cvweb@tteles.dev",
@@ -47,44 +47,45 @@ export const RESUME_DATA = {
         {
             company: "Bluecover",
             link: "https://bluecover.pt",
-            badges: [],
+            badges: ["Android"],
             title: "Intern",
             start: "2021",
             end: "2021",
             description:
-                "Reverse engineered part of a protocol more precise GPS tracking, created an application that used it and did small sysadmin tasks.",
+                "Reverse engineered a protocol for more precise GPS tracking(RTCM), created an Android application that used it and bootstrapped some on-site infrastructure.",
         },
         {
             company: "EDP NEW",
             link: "https://www.edp.com/en/inovacao/NEW",
-            badges: ["Dissertation"],
+            badges: ["Dissertation", "Distributed Systems", "Fullstack"],
             title: "Intern",
             start: "2023",
             end: "2024",
             description:
-                "Worked on a few European projects, including creating a p2p energy market, and fully developed some web applications",
+                "Worked on a few European projects, including creating a P2P energy market, and took a few web applications from 0 to production.",
         },
     ],
     skills: [
         "Kotlin",
+        "Java",
         "TypeScript",
-        "Python",
         "React",
         "Svelte",
         "Node.js",
+        "Networking",
+        "Linux"
     ],
     projects: [
         {
             title: "Intermodal",
             techStack: [
-                "Side Project",
                 "Javascript",
                 "SvelteKit",
-                "Vite",
                 "TailwindCSS",
-                "maplibre",
+                "maplibre-gl",
                 "tileserver-gl",
                 "planetiler",
+                "PostgreSQL",
                 "Rust",
                 "Axum",
             ],
@@ -98,22 +99,17 @@ export const RESUME_DATA = {
         {
             title: "Gira+",
             techStack: [
-                "Side Project",
-                "Javascript",
+                "Typescript",
                 "SvelteKit",
-                "Vite",
                 "TailwindCSS",
-                "maplibre",
-                "tileserver-gl",
-                "planetiler",
-                "Rust",
-                "Axum",
+                "maplibre-gl",
+                "Capacitor"
             ],
             description: "Replacement for the official app",
             logo: Intermodal,
             link: {
-                label: "editor.intermodal.pt",
-                href: "https://editor.intermodal.pt/",
+                label: "github/rt-evil-inc/gira",
+                href: "https://github.com/rt-evil-inc/gira",
             },
         },
     ],
