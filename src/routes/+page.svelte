@@ -110,6 +110,7 @@
       >
         {#each RESUME_DATA.projects as project}
           <CardProject
+            logo={project.logo}
             title={project.title}
             description={project.description}
             tags={[...project.techStack]}

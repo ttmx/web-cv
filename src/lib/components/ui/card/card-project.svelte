@@ -12,6 +12,7 @@
   export let description = "";
   export let tags: string[] = [];
   export let link = "";
+  export let logo: string | null = null;
 </script>
 
 <Card class="flex flex-col overflow-hidden border border-muted p-3">
@@ -24,11 +25,27 @@
             target="_blank"
             class="inline-flex items-center gap-1 hover:underline"
           >
+            {#if logo}
+              <img
+                src={logo}
+                alt={title}
+                class="w-6 h-6 rounded-full print:hidden"
+              />
+            {/if}
             {title}
             <span class="size-1 rounded-full bg-green-500"></span>
           </a>
         {:else}
-          {title}
+          <div class="flex gap-1">
+            {#if logo}
+              <img
+                src={logo}
+                alt={title}
+                class="w-6 h-6 rounded-full print:hidden"
+              />
+            {/if}
+            {title}
+          </div>
         {/if}
       </CardTitle>
       <div class="hidden font-mono text-xs underline print:visible">

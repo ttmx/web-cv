@@ -1,4 +1,5 @@
 import Intermodal from "$lib/logos/Intermodal.svg";
+import Gira from "$lib/logos/Gira+.svg";
 import { GithubLogo } from "radix-icons-svelte";
 
 export const RESUME_DATA = {
@@ -105,8 +106,8 @@ export const RESUME_DATA = {
                 "maplibre-gl",
                 "Capacitor"
             ],
-            description: "Replacement for the official app",
-            logo: Intermodal,
+            description: "Replacement for Lisbon's public bike sharing system's official app, with a focus on speed, reliability and clean UI",
+            logo: Gira,
             link: {
                 label: "github/rt-evil-inc/gira",
                 href: "https://github.com/rt-evil-inc/gira",
