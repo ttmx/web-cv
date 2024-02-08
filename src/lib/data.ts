@@ -10,7 +10,7 @@ export const RESUME_DATA = {
     about:
         "Full Stack Developer with a passion for fast, beautiful applications, and an interest in urban mobility.",
     summary:
-        "I'm a computer lover who enjoys making tools that help people. My journey has led me into the world of web development, security, distributed systems, algorithmics and urban mobility.",
+        "I'm a computer lover who enjoys making solutions with other enthusiastic devs that actually help people. My journey has led me into the world of web/app development, security, distributed systems, high performance algorithms and urban mobility.",
     avatarUrl: "/pfp.png",
     personalWebsiteUrl: "https://tteles.dev",
     contact: {
@@ -27,9 +27,9 @@ export const RESUME_DATA = {
     education: [
         {
             school: "NOVA School of Science and Technology",
-            degree: "Bachelor's Degree in Computer Engineering",
-            start: "2018",
-            end: "2021",
+            degree: "Master's Degree in Computer Engineering",
+            start: "2021",
+            end: "ongoing",
         },
         {
             school: "Dresden University of Technology",
@@ -39,22 +39,12 @@ export const RESUME_DATA = {
         },
         {
             school: "NOVA School of Science and Technology",
-            degree: "Master's Degree in Computer Engineering",
-            start: "2021",
-            end: "ongoing",
+            degree: "Bachelor's Degree in Computer Engineering",
+            start: "2018",
+            end: "2021",
         },
     ],
     work: [
-        {
-            company: "Bluecover",
-            link: "https://bluecover.pt",
-            badges: ["Android"],
-            title: "Intern",
-            start: "2021",
-            end: "2021",
-            description:
-                "Reverse engineered a protocol for more precise GPS tracking(RTCM), created an Android application that used it and bootstrapped some on-site infrastructure.",
-        },
         {
             company: "EDP NEW",
             link: "https://www.edp.com/en/inovacao/NEW",
@@ -65,15 +55,28 @@ export const RESUME_DATA = {
             description:
                 "Worked on a few European projects, including creating a P2P energy market, and took a few web applications from 0 to production.",
         },
+        {
+            company: "Bluecover",
+            link: "https://bluecover.pt",
+            badges: ["Android"],
+            title: "Intern",
+            start: "2021",
+            end: "2021",
+            description:
+                "Reverse engineered a protocol for more precise GPS tracking(RTCM), created an Android application that used it and bootstrapped some on-site infrastructure.",
+        },
     ],
     skills: [
         "Kotlin",
         "Java",
         "TypeScript",
-        "React",
+        "Python",
         "Svelte",
+        "React",
         "Node.js",
         "Networking",
+        "Cryptography",
+        "Distributed Systems",
         "Linux"
     ],
     projects: [
@@ -106,7 +109,7 @@ export const RESUME_DATA = {
                 "maplibre-gl",
                 "Capacitor"
             ],
-            description: "Replacement for Lisbon's public bike sharing system's official app, with a focus on speed, reliability and clean UI",
+            description: "Alternative for Lisbon's public bike sharing system's official app, with a focus on speed, reliability and clean UI",
             logo: Gira,
             link: {
                 label: "github/rt-evil-inc/gira",

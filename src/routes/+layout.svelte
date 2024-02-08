@@ -5,4 +5,7 @@
   import "@fontsource/inter/700.css";
 </script>
 
+<svelte:head>
+  <title>Tiago Teles | Software Dev</title>
+</svelte:head>
 <slot />

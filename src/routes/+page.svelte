@@ -5,7 +5,7 @@
     Mobile,
     GithubLogo,
   } from "radix-icons-svelte";
-//   import { CommandMenu } from "./components";
+  //   import { CommandMenu } from "./components";
 
   import { Button } from "$lib/components/ui/button";
   import {
@@ -65,11 +65,7 @@
             </Button>
           {/if}
           {#each RESUME_DATA.contact.social as social}
-            <Button
-              class="size-8"
-              variant="outline"
-              size="icon"
-            >
+            <Button class="size-8" variant="outline" size="icon">
               <a href={social.url}>
                 <svelte:component this={social.icon} class="size-4" />
               </a>
@@ -122,7 +118,7 @@
     <Section>
       <h2 class="text-xl font-bold">Work Experience</h2>
       {#each RESUME_DATA.work as work}
-        <Card >
+        <Card>
           <CardHeader>
             <div class="flex items-center justify-between gap-x-2 text-base">
               <h3
@@ -177,7 +173,7 @@
         </Card>
       {/each}
     </Section>
-    <Section>
+    <Section class="break-before-page print:pt-10">
       <h2 class="text-xl font-bold">Skills</h2>
       <div class="flex flex-wrap gap-1">
         {#each RESUME_DATA.skills as skill}
@@ -185,7 +181,6 @@
         {/each}
       </div>
     </Section>
-
   </section>
 
   <!-- <CommandMenu
