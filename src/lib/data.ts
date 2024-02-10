@@ -5,7 +5,7 @@ import { GithubLogo } from "radix-icons-svelte";
 export const RESUME_DATA = {
     name: "Tiago Teles",
     initials: "TT",
-    location: "Lisbon, Portugal, Earth (sometimes)",
+    location: "Lisbon, Portugal, Earth, GMT+0",
     locationLink: "https://www.google.com/maps/place/Lisbon",
     about:
         "Full Stack Developer with a passion for fast, beautiful applications, and an interest in urban mobility.",
@@ -53,7 +53,8 @@ export const RESUME_DATA = {
             start: "2023",
             end: "2024",
             description:
-                "Worked on a few European projects, including creating a P2P energy market, and took a few web applications from 0 to production.",
+                "Researched, planned and implemented an anonymous and cryptographically secure P2P system for autonomous energy trading, paving the way for lower energy costs and more sustainable grid operation.\n\
+                Developed a web platform for understanding municipalities renewable energy potentials, assisting with consulting. Developed a platform to provide miscelaneous services from EDP NEW to the rest of EDP.",
         },
         {
             company: "Bluecover",
@@ -63,7 +64,7 @@ export const RESUME_DATA = {
             start: "2021",
             end: "2021",
             description:
-                "Reverse engineered a protocol for more precise GPS tracking(RTCM), created an Android application that used it and bootstrapped some on-site infrastructure.",
+                "Reverse engineered a protocol for more precise GPS tracking(RTCM). Created an Android application that used this protocol. Added new features to an existing application. Bootstrapped simple on-site infrastructure, enabling remote work in the midst of the COVID pandemic.",
         },
     ],
     skills: [
@@ -80,6 +81,22 @@ export const RESUME_DATA = {
         "Linux"
     ],
     projects: [
+        {
+            title: "Gira+",
+            techStack: [
+                "Typescript",
+                "SvelteKit",
+                "TailwindCSS",
+                "maplibre-gl",
+                "Capacitor"
+            ],
+            description: "Alternative for Lisbon's public bike sharing system's official app, with a focus on speed, reliability and clean UI",
+            logo: Gira,
+            link: {
+                label: "github/rt-evil-inc/gira",
+                href: "https://github.com/rt-evil-inc/gira",
+            },
+        },
         {
             title: "Intermodal",
             techStack: [
@@ -98,22 +115,6 @@ export const RESUME_DATA = {
             link: {
                 label: "editor.intermodal.pt",
                 href: "https://editor.intermodal.pt/",
-            },
-        },
-        {
-            title: "Gira+",
-            techStack: [
-                "Typescript",
-                "SvelteKit",
-                "TailwindCSS",
-                "maplibre-gl",
-                "Capacitor"
-            ],
-            description: "Alternative for Lisbon's public bike sharing system's official app, with a focus on speed, reliability and clean UI",
-            logo: Gira,
-            link: {
-                label: "github/rt-evil-inc/gira",
-                href: "https://github.com/rt-evil-inc/gira",
             },
         },
     ],

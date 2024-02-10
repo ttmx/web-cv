@@ -7,7 +7,7 @@
 </script>
 
 <section
-  class={cn("flex min-h-0 flex-col gap-y-3", className)}
+  class={cn("flex min-h-0 flex-col gap-y-3 break-inside-avoid", className)}
   {...$$restProps}
 >
   <slot />

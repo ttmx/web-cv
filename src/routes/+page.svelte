@@ -128,7 +128,7 @@
                   {work.company}
                 </a>
 
-                <span class="inline-flex gap-x-1">
+                <span class="inline-flex gap-1 flex-wrap">
                   {#each work.badges as badge}
                     <Badge
                       variant="secondary"
@@ -140,7 +140,7 @@
                   {/each}
                 </span>
               </h3>
-              <div class="text-sm tabular-nums text-gray-500">
+              <div class="text-sm tabular-nums text-gray-500 whitespace-nowrap">
                 {work.start} - {work.end}
               </div>
             </div>
@@ -164,7 +164,7 @@
               <h3 class="font-semibold leading-none">
                 {education.school}
               </h3>
-              <div class="text-sm tabular-nums text-gray-500">
+              <div class="text-sm tabular-nums text-gray-500 whitespace-nowrap">
                 {education.start} - {education.end}
               </div>
             </div>
@@ -173,7 +173,7 @@
         </Card>
       {/each}
     </Section>
-    <Section class="break-before-page print:pt-10">
+    <Section>
       <h2 class="text-xl font-bold">Skills</h2>
       <div class="flex flex-wrap gap-1">
         {#each RESUME_DATA.skills as skill}
