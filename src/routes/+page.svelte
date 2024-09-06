@@ -64,11 +64,18 @@
               </a>
             </Button>
           {/if}
+          {#if RESUME_DATA.contact.github}
+            <Button class="size-8" variant="outline" size="icon">
+              <a href={"https://github.com/" + RESUME_DATA.contact.github}>
+                <GithubLogo class="size-4" />
+              </a>
+            </Button>
+          {/if}
           {#each RESUME_DATA.contact.social as social}
             <Button class="size-8" variant="outline" size="icon">
-              <a href={social.url}>
+              <!-- <a href={social.url}>
                 <svelte:component this={social.icon} class="size-4" />
-              </a>
+              </a> -->
             </Button>
           {/each}
         </div>
@@ -85,13 +92,18 @@
               <span class="underline">{RESUME_DATA.contact.tel}</span>
             </a>
           {/if}
+          {#if RESUME_DATA.contact.github}
+            <a href={`https://github.com/${RESUME_DATA.contact.github}`}>
+              <span class="underline">github/{RESUME_DATA.contact.github}</span>
+            </a>
+          {/if}
         </div>
       </div>
 
-      <Avatar class="size-28">
-        <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
-        <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-      </Avatar>
+        <Avatar class="size-28">
+          <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
+          <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
+        </Avatar>
     </div>
     <Section>
       <h2 class="text-xl font-bold">About</h2>

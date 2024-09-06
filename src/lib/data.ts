@@ -1,6 +1,5 @@
 import Intermodal from "$lib/logos/Intermodal.svg";
 import Gira from "$lib/logos/Gira+.svg";
-import { GithubLogo } from "radix-icons-svelte";
 
 export const RESUME_DATA = {
     name: "Tiago Teles",
@@ -15,13 +14,9 @@ export const RESUME_DATA = {
     personalWebsiteUrl: "https://tteles.dev",
     contact: {
         email: "cvweb@tteles.dev",
+        github: "ttmx",
         tel: null,
         social: [
-            {
-                name: "GitHub",
-                url: "https://github.com/ttmx",
-                icon: GithubLogo,
-            },
         ],
     },
     education: [
