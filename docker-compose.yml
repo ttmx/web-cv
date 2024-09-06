@@ -1,7 +1,8 @@
 version: '3.8'
 services:
-  web:
+  web-cv:
     build: .
     volumes:
       - .:/app
       - /app/node_modules
+    restart: always
