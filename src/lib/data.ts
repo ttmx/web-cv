@@ -28,7 +28,7 @@ export const RESUME_DATA = {
         },
         {
             school: "Dresden University of Technology",
-            degree: "Eramus+ Exchange Student in Computer Engineering",
+            degree: "Erasmus+ Exchange Student in Computer Engineering",
             start: "2022",
             end: "2022",
         },
