@@ -8,11 +8,21 @@
   } from "$lib/components/ui/card";
   import { Badge } from "$lib/components/ui/badge";
 
-  export let title = "";
-  export let description = "";
-  export let tags: string[] = [];
-  export let link = "";
-  export let logo: string | null = null;
+  interface Props {
+    title?: string;
+    description?: string;
+    tags?: string[];
+    link?: string;
+    logo?: string | null;
+  }
+
+  let {
+    title = "",
+    description = "",
+    tags = [],
+    link = "",
+    logo = null
+  }: Props = $props();
 </script>
 
 <Card class="flex flex-col overflow-hidden border border-muted p-3">
