@@ -1,6 +1,7 @@
 import Intermodal from "$lib/logos/Intermodal.svg";
 import Gira from "$lib/logos/Gira+.svg";
 import CMet from "$lib/logos/CMet.svg";
+import avatar from "./pfp.png?enhanced";
 
 export const RESUME_DATA = {
     name: "Tiago Teles",
@@ -11,7 +12,7 @@ export const RESUME_DATA = {
         "Full Stack Developer with a passion for fast, beautiful applications, and an interest in urban mobility.",
     summary:
         "I'm a computer lover who enjoys making solutions that actually help people, with other enthusiastic devs. My journey has led me into the world of web/app development, security, distributed systems, high performance algorithms and urban mobility.",
-    avatarUrl: "/pfp.png",
+    avatar: avatar,
     personalWebsiteUrl: "https://tteles.dev",
     contact: {
         email: "cvweb@tteles.dev",

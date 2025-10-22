@@ -1,28 +1,16 @@
 <script>
-  import {
-    SewingPin,
-    EnvelopeClosed,
-    Mobile,
-    GithubLogo,
-  } from "radix-icons-svelte";
-  //   import { CommandMenu } from "./components";
+  import { EnvelopeClosed, GithubLogo, Mobile, SewingPin } from "svelte-radix";
 
+  import { Badge } from "$lib/components/ui/badge";
   import { Button } from "$lib/components/ui/button";
   import {
-    Avatar,
-    AvatarImage,
-    AvatarFallback,
-  } from "$lib/components/ui/avatar";
-  import {
-    Card,
-    CardHeader,
-    CardContent,
-    CardProject,
+      Card,
+      CardContent,
+      CardHeader,
+      CardProject,
   } from "$lib/components/ui/card";
-  import { Badge } from "$lib/components/ui/badge";
   import { Section } from "$lib/components/ui/section";
   import { RESUME_DATA } from "$lib/data";
-  //   import { CommandMenu } from "$lib/components/ui/command";
 </script>
 
 <main
@@ -100,11 +88,11 @@
         </div>
       </div>
 
-        <Avatar class="size-28">
-          <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
-          <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-        </Avatar>
-      
+      <enhanced:img
+        class="size-28 rounded-xl object-cover flex items-center justify-center text-center"
+        alt={RESUME_DATA.initials}
+        src={RESUME_DATA.avatar}
+      />
     </div>
     <Section>
       <h2 class="text-xl font-bold">About</h2>
@@ -195,14 +183,4 @@
       </div>
     </Section>
   </section>
-
-  <!-- <CommandMenu
-    links={[
-      { url: RESUME_DATA.personalWebsiteUrl, title: "Personal Website" },
-      ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
-        url: socialMediaLink.url,
-        title: socialMediaLink.name,
-      })),
-    ]}
-  /> -->
 </main>
