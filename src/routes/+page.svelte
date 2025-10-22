@@ -104,6 +104,7 @@
           <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
           <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
         </Avatar>
+      
     </div>
     <Section>
       <h2 class="text-xl font-bold">About</h2>
