@@ -1,30 +1,38 @@
 <script>
-  import { EnvelopeClosed, GithubLogo, Mobile, SewingPin } from "svelte-radix";
+  import {
+    EnvelopeClosed,
+    FileText,
+    GithubLogo,
+    Mobile,
+    SewingPin,
+  } from "svelte-radix";
 
   import { Badge } from "$lib/components/ui/badge";
   import { Button } from "$lib/components/ui/button";
   import {
-      Card,
-      CardContent,
-      CardHeader,
-      CardProject,
+    Card,
+    CardContent,
+    CardHeader,
+    CardProject,
   } from "$lib/components/ui/card";
   import { Section } from "$lib/components/ui/section";
   import { RESUME_DATA } from "$lib/data";
 </script>
 
 <main
-  class="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16"
+  class="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-0 md:p-16"
 >
   <section class="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
     <div class="flex items-center justify-between">
       <div class="flex-1 space-y-1.5">
         <h1 class="text-2xl font-bold">{RESUME_DATA.name}</h1>
-        <p class="max-w-md text-pretty font-mono text-sm text-muted-foreground">
+        <p
+          class="max-w-md print:max-w-full text-pretty font-mono text-sm text-muted-foreground"
+        >
           {RESUME_DATA.about}
         </p>
         <p
-          class="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground"
+          class="max-w-md print:max-w-full items-center text-pretty font-mono text-xs text-muted-foreground"
         >
           <a
             class="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
@@ -59,6 +67,11 @@
               </a>
             </Button>
           {/if}
+          <Button class="size-8" variant="outline" size="icon">
+            <a href={`https://${RESUME_DATA.blogUrl}`}>
+              <FileText class="size-4" />
+            </a>
+          </Button>
           {#each RESUME_DATA.contact.social as social}
             <Button class="size-8" variant="outline" size="icon">
               <!-- <a href={social.url}>
@@ -68,7 +81,7 @@
           {/each}
         </div>
         <div
-          class="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex"
+          class="hidden gap-x-4 font-mono text-sm text-muted-foreground print:flex"
         >
           {#if RESUME_DATA.contact.email}
             <a href={`mailto:${RESUME_DATA.contact.email}`}>
@@ -85,36 +98,25 @@
               <span class="underline">github/{RESUME_DATA.contact.github}</span>
             </a>
           {/if}
+          {#if RESUME_DATA.blogUrl}
+            <a href={`https://${RESUME_DATA.blogUrl}`}>
+              <span class="underline">{RESUME_DATA.blogUrl}</span>
+            </a>
+          {/if}
         </div>
       </div>
 
       <enhanced:img
-        class="size-28 rounded-xl object-cover flex items-center justify-center text-center"
+        class="size-28 rounded-xl object-cover flex items-center justify-center text-center print:hidden"
         alt={RESUME_DATA.initials}
         src={RESUME_DATA.avatar}
       />
     </div>
-    <Section>
+    <Section class="print:hidden">
       <h2 class="text-xl font-bold">About</h2>
       <p class="text-pretty font-mono text-sm text-muted-foreground">
         {RESUME_DATA.summary}
       </p>
-    </Section>
-    <Section class="print-force-new-page scroll-mb-16">
-      <h2 class="text-xl font-bold">Projects</h2>
-      <div
-        class="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3"
-      >
-        {#each RESUME_DATA.projects as project}
-          <CardProject
-            logo={project.logo}
-            title={project.title}
-            description={project.description}
-            tags={[...project.techStack]}
-            link={"link" in project ? project.link.href : undefined}
-          />
-        {/each}
-      </div>
     </Section>
     <Section>
       <h2 class="text-xl font-bold">Work Experience</h2>
@@ -155,6 +157,22 @@
           </CardContent>
         </Card>
       {/each}
+    </Section>
+    <Section class="print-force-new-page scroll-mb-16">
+      <h2 class="text-xl font-bold">Projects</h2>
+      <div
+        class="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3 print:block"
+      >
+        {#each RESUME_DATA.projects as project}
+          <CardProject
+            logo={project.logo}
+            title={project.title}
+            description={project.description}
+            tags={[...project.techStack]}
+            link={"link" in project ? project.link.href : undefined}
+          />
+        {/each}
+      </div>
     </Section>
     <Section>
       <h2 class="text-xl font-bold">Education</h2>

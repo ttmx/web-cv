@@ -21,11 +21,13 @@
     description = "",
     tags = [],
     link = "",
-    logo = null
+    logo = null,
   }: Props = $props();
 </script>
 
-<Card class="flex flex-col overflow-hidden border border-muted p-3">
+<Card
+  class="flex flex-col overflow-hidden border border-muted p-3 print:p-y print:border-0"
+>
   <CardHeader class="">
     <div class="space-y-1">
       <CardTitle class="text-base">
@@ -43,7 +45,7 @@
               />
             {/if}
             {title}
-            <span class="size-1 rounded-full bg-green-500"></span>
+            <span class="size-1 rounded-full bg-green-500 print:hidden"></span>
           </a>
         {:else}
           <div class="flex gap-1">

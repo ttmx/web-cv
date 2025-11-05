@@ -9,13 +9,14 @@ export const RESUME_DATA = {
     location: "Lisbon, Portugal, Earth, GMT+0",
     locationLink: "https://www.google.com/maps/place/Lisbon",
     about:
-        "Full Stack Developer with a passion for fast, beautiful applications, and an interest in urban mobility.",
+        "Full stack engineer focused on low latency, production grade systems across mobility, energy and geospatial services.",
     summary:
-        "I'm a computer lover who enjoys making solutions that actually help people, with other enthusiastic devs. My journey has led me into the world of web/app development, security, distributed systems, high performance algorithms and urban mobility.",
+        "I'm a computer lover who enjoys making solutions that actually help people, with other enthusiastic devs.\
+  My journey has led me into the world of web/app development, security, distributed systems, high performance algorithms and urban mobility.",
     avatar: avatar,
-    personalWebsiteUrl: "https://tteles.dev",
+    blogUrl: null,
     contact: {
-        email: "cvweb@tteles.dev",
+        email: "cv@tteles.dev",
         github: "ttmx",
         tel: null,
         social: [
@@ -29,8 +30,14 @@ export const RESUME_DATA = {
             end: "2025",
         },
         {
+            school: "Vrije Universiteit Brussel",
+            degree: "Erasmus+ BIP Distributed and Replicated Environments",
+            start: "2023",
+            end: "2023",
+        },
+        {
             school: "Dresden University of Technology",
-            degree: "Erasmus+ Exchange Student in Computer Engineering",
+            degree: "Erasmus Exchange Student in Computer Engineering",
             start: "2022",
             end: "2022",
         },
@@ -45,23 +52,23 @@ export const RESUME_DATA = {
         {
             company: "Carris Metropolitana",
             link: "https://carrismetropolitana.pt",
-            badges: ["Next.js", "Docker", "Mantine", "SvelteKit", "Cloudflare", "Data Pipeline", "Linear.app"],
-            title: "Consultant",
+            badges: ["Next.js", "Docker", "Cloudflare", "PostgreSQL", "Linear.app"],
+            title: "Full Stack Developer",
             start: "2024",
             end: "2024",
             description:
-                "Bootstrapped the internal company tech, with a new website, automatic PDF generation, GTFS parsing pipelines, automatic deployments, Cloudflare caching, and one off tools for non technical people. A bit of everything, participated in bringing the company from close to zero to the best in the business.",
+                "Bootstrapped the internal company tech, with a new website, api, automatic PDF generation, GTFS parsing pipelines, automatic deployments, Cloudflare caching, and one off tools for non technical people. Participated in bringing the company from close to zero to a fully fledged bus operation with comprehensive user available data.",
         },
         {
             company: "EDP NEW",
             link: "https://www.edp.com/en/inovacao/NEW",
             badges: ["Dissertation", "Distributed Systems", "Fullstack"],
-            title: "Intern",
+            title: "Distributed Systems Researcher (Dissertation)",
             start: "2023",
             end: "2024",
             description:
                 "Researched, planned and implemented an anonymous and cryptographically secure P2P system for autonomous energy trading, paving the way for lower energy costs and more sustainable grid operation.\n\
-                Developed a web platform for understanding municipalities renewable energy potentials, assisting with consulting. Developed a platform to provide miscelaneous services from EDP NEW to the rest of EDP.",
+                Developed a web platform for understanding municipalities renewable energy potentials, assisting with consulting. Developed a platform to provide miscellaneous services from EDP NEW to the rest of EDP.",
         },
         {
             company: "Bluecover",
@@ -83,7 +90,7 @@ export const RESUME_DATA = {
         "Python",
         "Node.js",
         "Networking",
-	"Docker",
+        "Docker",
         "Cryptography",
         "Distributed Systems",
         "Linux"
@@ -99,7 +106,7 @@ export const RESUME_DATA = {
                 "maplibre-gl",
                 "Capacitor"
             ],
-            description: "Alternative app for Lisbon's public bike sharing system, with a focus on speed, reliability and clean UI. Peaked 6th on the App Store for mobility apps, currently at 700~ DAU, 5* Play Store/4.8* App Store. You can see these stats live at the link below.",
+            description: "Alternative app for Lisbon's public bike sharing system, with a focus on speed, reliability and clean UI. Peaked 6th on the App Store for mobility apps, currently at 1300~ DAU, 5* Play Store/4.8* App Store. You can see these stats live at the link below.",
             logo: Gira,
             link: {
                 label: "gira-mais.app",
@@ -132,33 +139,15 @@ export const RESUME_DATA = {
                 "Typescript",
                 "Next.js",
                 "React",
-                "Mantine",
                 "maplibre-gl",
                 "MongoDB",
                 "Redis",
             ],
-            description: "Official website for the largest bus operator in Portugal",
+            description: "Official website for the largest bus operator in Portugal including live bus tracking, history, statistics and more",
             logo: CMet,
             link: {
                 label: "carrismetropolitana.pt",
                 href: "https://carrismetropolitana.pt/",
-            },
-        },
-        {
-            title: "Bus Schedule Generator",
-            techStack: [
-                "Typescript",
-                "Next.js",
-                "React",
-                "Tailwind",
-                "Puppeteer",
-                "Bun",
-            ],
-            description: "PDF Bus schedule generator from GTFS, these schedules are being deployed throughout Metropolitan Lisbon to this day",
-            logo: CMet,
-            link: {
-                label: "Schedule repository",
-                href: "https://storage.carrismetropolitana.pt/static/pdfs/horarios",
             },
         },
     ],

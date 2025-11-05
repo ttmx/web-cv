@@ -1,16 +1,11 @@
 <script lang="ts">
   import "../app.pcss";
-  import "@fontsource/inter";
-  import "@fontsource/inter/600.css";
-  import "@fontsource/inter/700.css";
-  interface Props {
-    children?: import('svelte').Snippet;
-  }
+  import "@fontsource-variable/inter";
 
-  let { children }: Props = $props();
+  let { children } = $props();
 </script>
 
 <svelte:head>
-  <title>Tiago Teles | Software Dev</title>
+  <title>Tiago Teles | Software Engineer</title>
 </svelte:head>
 {@render children?.()}
